@@ -49,6 +49,7 @@ export default function Home() {
   const [memoryTrail, setMemoryTrail] = useState([]);
   const [memoryLoading, setMemoryLoading] = useState(false);
   const selected = useMemo(() => posts.find((post) => post.id === selectedId) ?? posts[0], [posts, selectedId]);
+  const replayDemo = typeof window !== "undefined" && new URLSearchParams(window.location.search).get("demo") === "replay";
 
   useEffect(() => {
     fetch("/api/status")
@@ -61,6 +62,14 @@ export default function Home() {
     setLoading(true);
     setNotice("");
     try {
+      if (replayDemo) {
+        const reply = selected.id === "p2"
+          ? "Thanks for flagging this again, Leo. I know you have already tried twice, so I am prioritizing the member link issue for a quick check and update."
+          : "Maya, I am glad the storyboard breakdown helped. For a 30-second reel, start with a three-second hook, one clear story beat, and a final call to action — your lighting checklist will fit right into that flow.";
+        setReply(reply);
+        setNotice("Recorded demo replay — the production path uses the same persistent Minds conversation.");
+        return;
+      }
       const response = await fetch("/api/draft", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -87,6 +96,10 @@ export default function Home() {
     setLoading(true);
     setNotice("");
     try {
+      if (replayDemo) {
+        setNotice("Echo's daily follow-up: Leo's broken member link should be addressed first; he is a long-term member and the issue remains unresolved across sessions.");
+        return;
+      }
       const response = await fetch("/api/autopilot", {
         method: "POST",
         headers: { "Content-Type": "application/json" },

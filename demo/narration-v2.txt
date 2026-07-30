@@ -1,0 +1,15 @@
+Community managers do not need another chat box. They need continuity.
+
+ReplyNest is a persistent community Mind built for creator communities. It keeps context between conversations, so members do not have to start over every time.
+
+Here is the daily care queue. Maya has a content question, Leo has a broken member link, and Nia has shared a win. Echo brings the right member context into view before the manager writes a word.
+
+First, click Show persistent memory proof. The interface reveals a real saved conversation trail: context was stored, the Mind responded, and the next interaction can build on that history. This is the difference between a one-off assistant and a relationship that continues.
+
+Now click Draft with Echo. For Maya's question, Echo prepares a warm, specific reply based on the creator context already saved. The manager remains in control and can review or edit before sending.
+
+Next, select Leo. Echo remembers he is a long-term member and has had onboarding trouble before. That context changes the recommendation: his unresolved access issue should receive priority follow-up.
+
+Finally, click Run daily follow-up. Echo surfaces the unresolved issue across sessions and turns memory into a concrete care action.
+
+ReplyNest: not a chatbot. A persistent community relationship that helps creators feel remembered.
