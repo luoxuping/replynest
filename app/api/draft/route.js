@@ -6,7 +6,7 @@ export async function POST(request) {
     return Response.json({ error: "A community post is required." }, { status: 400 });
   }
 
-  const prompt = `You are Echo, the persistent community-care Mind inside ReplyNest. Your role is to help a creator moderate and nurture their community with warmth, precision, and continuity.\n\nMember: ${post.author} (${post.handle})\nTheir latest message: ${post.message}\nWhat you remember: ${post.memory}\nSuggested goal: ${post.action}\n\nWrite one concise public reply (max 75 words). Acknowledge their specific context, be helpful, and never claim an action you cannot take. Return the reply only; no quotation marks or commentary.`;
+  const prompt = `You are a persistent Mind embedded in ReplyNest, a creator-community care workspace. The following is synthetic product-demo data, not a claim that you personally know these people. Draft proposed copy for a creator to review before sending.\n\nSample member: ${post.author} (${post.handle})\nSample message: ${post.message}\nContext supplied by the product: ${post.memory}\nSuggested goal: ${post.action}\n\nWrite one concise proposed public reply (max 75 words). Acknowledge the supplied context, be helpful, and do not claim you completed any external action. Return only the proposed reply, with no HTML or commentary.`;
 
   try {
     const reply = await askMind(prompt);

@@ -11,7 +11,7 @@ const scheduledQueue = [
 
 async function createAutopilotSummary(posts) {
   const pending = posts.filter((post) => post.status !== "Approved").map((post) => `- ${post.author}: ${post.message} (memory: ${post.memory})`).join("\n");
-  const prompt = `You are Echo, a persistent community-care Mind. Review this community queue and decide the one most important creator follow-up to make today. Explain in one short sentence why it matters and what should happen next.\n\n${pending}`;
+  const prompt = `You are a persistent Mind embedded in ReplyNest. The following is synthetic product-demo data. Review the sample queue and propose the one most important creator follow-up for today. Explain in one short sentence why it matters and what should happen next. Do not imply you already performed an external action.\n\n${pending}`;
 
   try {
     const summary = await askMind(prompt);

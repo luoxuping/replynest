@@ -4,6 +4,8 @@
 
 ReplyNest uses a [Minds by Animoca Brands](https://build.hellominds.ai) agent as its core decision-maker. It preserves a single conversation alias across requests, so the Mind can retain member context, resume unresolved care, and provide proactive daily follow-ups.
 
+The built-in showcase uses synthetic creator-community records. The UI labels every Mind output as a creator-reviewable proposal; it never claims that a Mind knows a person or took an external action without real source data and an approved integration.
+
 ## Why it fits the brief
 
 | Jam requirement | ReplyNest implementation |
@@ -48,6 +50,10 @@ When creating the Mind, tell the Concierge:
 4. Click **Show persistent memory proof**: show the live Minds conversation trail — not a mocked activity log.
 5. Click **Run daily follow-up**: show Echo prioritizing Leo without another user prompt.
 6. Close on the three proof points: long-term memory, cross-session continuity, and autonomous daily follow-up.
+
+## Demo video
+
+[`demo/ReplyNest-Demo.mp4`](demo/ReplyNest-Demo.mp4) is a 99.9-second, 720p English-narrated walkthrough of the product and its Minds integration.
 
 ## Submission checklist
 
